@@ -1,9 +1,36 @@
+var operation = ["subtract", "add", "multiply", "divide"];
+var randomOperation = Math.floor(Math.random() * operation.length); //selects a random array position
+var selector = operation[randomOperation]; //a string value equal to randomOperation value
 var first = (Math.floor(Math.random()* 10) + 1);
 var second = (Math.floor(Math.random()* 10) + 1);
-var operation = Math.rand(["subtract", "add", "multiply", "divide"]);
-console.log(operation);
+console.log(first);
+console.log(second);
+console.log(selector);
 
-var problem  = document.getElementById("problem").nodeValue;
+function onClick(){
+  if (selector == "add")
+    add();
+  else if (selector == "subtract")
+    subtract();
+  else if (selector == "multiply")
+    multiply();
+  else if (selector == "divide")
+    divide();
+}
 
-var answer = first
-console.log(answer);
+function add(){
+  var answer = first + second;
+  console.log(answer);
+}
+function multiply(){
+  var answer = first * second;
+  console.log(answer);
+}
+function subtract(){
+  var answer = first - second;
+  console.log(answer);
+}
+function divide(){
+  var answer = first / second;
+  console.log(answer);
+}
