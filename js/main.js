@@ -41,7 +41,7 @@ function add(){
     document.getElementById("score").innerHTML = "Score : " + score;
     newProblem();
   } else {
-    console.log("you fucked up");
+    console.log("you messed up");
   }
 }
 function multiply(){
@@ -55,7 +55,7 @@ function multiply(){
     document.getElementById("score").innerHTML = "Score : " + score;
     newProblem();
   } else {
-    console.log("you fucked up");
+    console.log("you messed up");
   }
 }
 function subtract(){
@@ -69,7 +69,7 @@ function subtract(){
     document.getElementById("score").innerHTML = "Score : " + score;
     newProblem();
   } else {
-    console.log("you fucked up");
+    console.log("you messed up");
   }
 }
 //function divide(){
