@@ -1,0 +1,14 @@
+.container{
+  width: 50%;
+  margin: auto;
+}
+.header{
+  margin:auto;
+}
+#input{
+  float: left;
+}
+#question{
+  float: left;
+  margin-top: -14px;
+}
