@@ -4,19 +4,21 @@
 <title>Test</title>
 <link rel = "stylesheet" href="css/style.css">
 </head>
-<body onload="newProblem()">
+<body>
   <div class = "container">
     <div class = "header">
       <h1> Mathlete </h1>
       <h3> Solve math problems as fast as you can. </h3>
     </div> <!--end header-->
     <div class = "body">
+      <div id = "scorekeep">
+      <p id = "score"> Score : 0 </p>
+      </div> <!--end scorekeep-->
       <div id = "question">
         <p id = "problem"> </p>
       </div> <!--end question-->
       <div id = "input">
         <input type = "text" name = "user" id = "user" onKeyPress="enterpressalert(event, this)"> </input>
-        <p id = "score"> Score : 0 </p>
       </div> <!--end input-->
     </div> <!--end body-->
   </div> <!--end container-->

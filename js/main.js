@@ -2,8 +2,10 @@ var operation = ["subtract", "add", "multiply"];
 var user, randomOperation, selector, first, second, answer;
 var score = 0;
 
+window.onLoad = newProblem();
+
 function newProblem(){
-  randomOperation = Math.floor(Math.random() * operation.length); //selects a random array position
+  randomOperation = Math.floor(Math.random() * operation.length); //selects a random position of operation array
   selector = operation[randomOperation]; //a string value equal to randomOperation value
   first = (Math.floor(Math.random()* 10) + 1);
   second = (Math.floor(Math.random()* 10) + 1);
@@ -15,7 +17,6 @@ function newProblem(){
   document.getElementById("problem").innerHTML = problem[randomOperation].problem;
   return randomOperation, selector, first, second, answer;
 }
-
 function enterpressalert(e, text){
 var code = (e.keyCode ? e.keyCode : e.which);
   if(code == 13) { //Enter keycode
@@ -36,7 +37,7 @@ function add(){
   console.log("user: " + user);
   console.log("addition answer: " + answer);
   if (user == answer) {
-    document.getElementById('user').value = ""
+    document.getElementById('user').value = "";
     score = score + 1
     document.getElementById("score").innerHTML = "Score : " + score;
     newProblem();
@@ -50,7 +51,7 @@ function multiply(){
   console.log("user: " + user);
   console.log("multiplication answer: " + answer);
   if (user == answer) {
-    document.getElementById('user').value = ""
+    document.getElementById('user').value = "";
     score = score + 1
     document.getElementById("score").innerHTML = "Score : " + score;
     newProblem();
@@ -64,13 +65,16 @@ function subtract(){
   console.log("user: " + user);
   console.log("addition answer: " + answer);
   if (user == answer) {
-    document.getElementById('user').value = ""
+    document.getElementById('user').value = "";
     score = score + 1
     document.getElementById("score").innerHTML = "Score : " + score;
     newProblem();
   } else {
     console.log("you messed up");
   }
+}
+function wrong(){
+  
 }
 //function divide(){
 //  var answer = first / second;
