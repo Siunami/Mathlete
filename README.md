@@ -1,2 +1,2 @@
 # Mathlete
-Incrementally Harder Math Problems
+Randomly generated math operation problems
