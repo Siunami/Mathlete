@@ -14,7 +14,7 @@ function newProblem(){
     {problem: first + " + " + second + " = "},
     {problem: first + " x " + second + " = "},
   ]
-  document.getElementById("problem").innerHTML = problem[randomOperation].problem;
+  document.getElementById("problem").innerHTML = problem[randomOperation].problem; //grab correct operation syntax from problem object
   return randomOperation, selector, first, second, answer;
 }
 function enterpressalert(e, text){
@@ -40,9 +40,10 @@ function add(){
     document.getElementById('user').value = "";
     score = score + 1
     document.getElementById("score").innerHTML = "Score : " + score;
+    correct();
     newProblem();
   } else {
-    console.log("you messed up");
+    wrong();
   }
 }
 function multiply(){
@@ -54,9 +55,10 @@ function multiply(){
     document.getElementById('user').value = "";
     score = score + 1
     document.getElementById("score").innerHTML = "Score : " + score;
+    correct();
     newProblem();
   } else {
-    console.log("you messed up");
+    wrong();
   }
 }
 function subtract(){
@@ -68,13 +70,19 @@ function subtract(){
     document.getElementById('user').value = "";
     score = score + 1
     document.getElementById("score").innerHTML = "Score : " + score;
+    correct();
     newProblem();
   } else {
-    console.log("you messed up");
+    wrong();
   }
 }
 function wrong(){
-  
+  document.getElementById('body').className = "wrong";
+  var myVar =  setInterval(function(){  document.getElementById('body').className = ""; clearInterval(myVar);}, 100);
+}
+function correct(){
+  document.getElementById('body').className = "correct";
+  var myVar =  setInterval(function(){  document.getElementById('body').className = ""; clearInterval(myVar);}, 100);
 }
 //function divide(){
 //  var answer = first / second;
