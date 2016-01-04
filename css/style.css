@@ -2,7 +2,7 @@
   width: 50%;
   margin: auto;
 }
-#body {
+body {
       background-color: rgb(255, 255, 255);
       opacity: 1;
       transition: all 0.02s ease-in;
@@ -11,14 +11,14 @@
       -webkit-transition: all 0.02s ease-in;
     }
 
-    #body.wrong {
+    body.wrong {
       background-color: rgb(190, 19, 24);
       transition: all 0.02s ease-out;
       -ms-transition: all 0.02s ease-out;
       -moz-transition: all 0.02s ease-out;
       -webkit-transition: all 0.02s ease-out;
     }
-    #body.correct {
+    body.correct {
       background-color: rgb(47, 199, 44);
       transition: all 0.02s ease-out;
       -ms-transition: all 0.02s ease-out;
